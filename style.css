@@ -1,0 +1,54 @@
+/* Custom font-family */
+.font-inter {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Specific styling for the search input group */
+.input-group {
+    max-width: 600px; /* Limit width of search bar */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px !important; /* Make it perfectly rounded */
+}
+
+.input-group .form-control {
+    border-radius: 0 50px 50px 0 !important; /* Round only the right side of input */
+}
+
+.input-group .input-group-text {
+    border-radius: 50px 0 0 50px !important; /* Round only the left side of icon */
+}
+
+/* Styling for country cards */
+.country-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border-radius: 15px; /* Rounded corners for cards */
+    overflow: hidden; /* Ensures content stays within rounded corners */
+}
+
+.country-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+}
+
+.country-card img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    height: 150px; /* Fixed height for images */
+}
+
+/* Ensure content within card is padded */
+.card-body {
+    padding: 1.25rem;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 576px) {
+    .input-group {
+        width: 90%; /* Adjust width for very small screens */
+    }
+    .country-card img {
+        height: 120px; /* Slightly smaller images on small screens */
+    }
+}
